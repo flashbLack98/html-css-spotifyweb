@@ -4,16 +4,58 @@
     box-sizing: border-box;
 }
 
+.container{
+    display:flex;
+    height: 100vh;
+    position: relative;
+}
+
 .aside{
     background-color: black;
-    width: 10vw;
-    height: 100vh;
-    display:inline-block;
+    width: 10%;
+    height: 100%;
 }
+
+.aside ul{
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.aside li{
+    width: 100%;
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.aside a{
+ padding:5px 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .main{
     background-color: purple;
-    width: 90px;
-    height: 100vh;
-    display:inline-block;
+    width: 90%;
+    height: 100%;
+}
+
+.action{
+    background-color: green;
+    height:10% ;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 }
