@@ -4,3 +4,16 @@
     box-sizing: border-box;
 }
 
+.aside{
+    background-color: black;
+    width: 10vw;
+    height: 100vh;
+    display:inline-block;
+}
+
+.main{
+    background-color: purple;
+    width: 90px;
+    height: 100vh;
+    display:inline-block;
+}
