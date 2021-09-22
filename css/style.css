@@ -14,7 +14,14 @@
     background-color: black;
     width: 10%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
+
+.aside__top-container{
+    flex-shrink: 0;
+}
+
 
 .aside ul{
     padding: 5px;
@@ -27,10 +34,29 @@
     margin-bottom: 5px;
 }
 
-.aside a{
- padding:5px 0;
-
+.aside__central-container{
+    flex-grow: 1;
 }
+
+.aside__bottom-container{
+    flex-shrink: 0;
+    padding-bottom: 50px;
+}
+
+
+
+.aside__download-icon{
+    width: 15px;
+}
+
+.aside__user-icon{
+    background-color: #878787;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    overflow: hidden;
+}
+
 
 
 
@@ -47,13 +73,13 @@
 
 
 .main{
-    background-color: purple;
+    background-color: #141922;
     width: 90%;
     height: 100%;
 }
 
 .action{
-    background-color: green;
+    background-color: #282828;
     height:10% ;
     width: 100%;
     position: absolute;
