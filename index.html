@@ -3,6 +3,9 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -12,15 +15,41 @@
         <div class="aside">
 
             <div class="aside__top-container">
+                <div class="aside__logo-grande"><a href="#"></a><img src="img/logo.svg" alt="logo grande"></div>
                 <ul>
-                    <li><a href="#"><img src="img/logo-small.svg" alt=""></a></li>
-                    <li><a href="#"><img src="img/home.svg" alt=""></a></li>
-                    <li><a href="#"><img src="img/search.svg" alt=""></a></li>
-                    <li><a href="#"><img src="img/libreria.svg" alt=""></a></li>
+                    <li id="aside__logo-piccolo"><a href="#"><img src="img/logo-small.svg" alt="logo piccolo"></a></li>
+                    <li>
+                        <a href="#"><img src="img/home.svg" alt=""></a>
+                        <span>Home</span>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/search.svg" alt=""></a>
+                        <span>Cerca</span>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/libreria.svg" alt=""></a>
+                        <span>Libreria</span>
+                    </li>
                 </ul>
             </div>
 
-            <div class="aside__central-container"></div>
+            <div class="aside__central-container">
+                <div class="aside__playlist-container">
+                    <h6>PLAYLIST</h6>
+                    <div class="aside__playlist-text">
+                        <div class="aside__playlist-plus">+</div><span>Crea Playlist</span>
+                    </div>
+                    
+                    <div class="aside__playlist-name">Nome Playlist</div>
+                    <div class="aside__playlist-name">Nome Playlist</div>
+                    <div class="aside__playlist-name">Nome Playlist</div>
+                    <div class="aside__playlist-name">Nome Playlist</div>
+                    <div class="aside__playlist-name">Nome Playlist</div>
+                    <div class="aside__playlist-name">Nome Playlist</div>
+                    <div class="aside__playlist-name">Nome Playlist</div>
+                </div>
+                    
+            </div>
 
             <div class="aside__bottom-container">
                 <ul>
@@ -28,11 +57,70 @@
                     <li class="aside__user-icon"><a href="#"><img src="img/profile.svg" alt=""></a></li>
                 </ul>
             </div>
-                
-    
-        
         </div>
-        <div class="main"></div>
+
+        <div class="main">
+            <div class="main__upgrade-container">
+                <a href="#">EFFETUA L'UPGRADE</a>
+            </div>
+
+            <div class="main__music-container">
+                <div class="main__music-type-container">
+                    <div>IN EVIDENZA</div>
+                    <div>PODCAST</div>
+                    <div>CLASSIFICHE</div>
+                    <div>GENERI E MOOD</div>
+                    <div>NUOVE USCITE</div>
+                    <div>SCOPRI</div>
+                </div>
+
+                <div class="main__title"><h3>Recently played</h3></div>
+                <div class="main__card-container">
+                    <div class="main__card">
+                        <div><img src="img/metal_lifting.jpg" alt=""></div>
+                        <div><h5>Heavy metal</h5></div>
+                        <div><p>Subtitle</p></div>
+                    </div>
+
+                    <div class="main__card">
+                        <div><img src="img/metal_lifting.jpg" alt=""></div>
+                        <div><h5>Heavy metal</h5></div>
+                        <div><p>Subtitle</p></div>
+                    </div>
+
+                    <div class="main__card">
+                        <div><img src="img/metal_lifting.jpg" alt=""></div>
+                        <div><h5>Heavy metal</h5></div>
+                        <div><p>Subtitle</p></div>
+                    </div>
+
+                    <div class="main__card">
+                        <div><img src="img/metal_lifting.jpg" alt=""></div>
+                        <div><h5>Heavy metal</h5></div>
+                        <div><p>Subtitle</p></div>
+                    </div>
+
+                    <div class="main__card">
+                        <div><img src="img/metal_lifting.jpg" alt=""></div>
+                        <div><h5>Heavy metal</h5></div>
+                        <div><p>Subtitle</p></div>
+                    </div>
+
+                    <div class="main__card">
+                        <div><img src="img/metal_lifting.jpg" alt=""></div>
+                        <div><h5>Heavy metal</h5></div>
+                        <div><p>Subtitle</p></div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
 
 
         <div class="action">
@@ -52,26 +140,30 @@
 
             <div class="action___control-button-container">
                 <div class="control__button">
-                    <div><i class="fas fa-random"></i></div>
-                    <div><i class="fas fa-step-backward"></i></div>
-                    <div><i class="far fa-play-circle"></i></div>
-                    <div><i class="fas fa-step-forward"></i></div>
-                    <div><i class="fas fa-redo-alt"></i></div>
+                    <div><a href="#"><i class="fas fa-random"></i></a></div>
+                    <div><a href="#"><i class="fas fa-step-backward"></i></a></div>
+                    <div><a href="#"><i class="far fa-play-circle"></i></a></div>
+                    <div><a href="#"><i class="fas fa-step-forward"></i></a></div>
+                    <div><a href="#"><i class="fas fa-redo-alt"></i></a></div>
                 </div>
 
                 <div class="control__timeline">
                     <p>0:25</p>
-                    <div class="timeline"></div>
+                    <div class="timeline">
+                        <div class="timeline__progress"></div>
+                    </div>
                     <p>4:35</p>
                 </div>
             </div>
 
 
             <div class="action__setup-button">
-                <div><i class="fas fa-list-ul"></i></div>
-                <div><i class="fas fa-tv"></i></div>
-                <div><i class="fas fa-volume-up"></i></div>
-                <div class="action__volume"></div>
+                <div><a href="#"><i class="fas fa-list-ul"></i></a></div>
+                <div><a href="#"><i class="fas fa-tv"></i></a></div>
+                <div><a href="#"><i class="fas fa-volume-up"></i></a></div>
+                <div class="action__volume">
+                    <div class="action__volume-progress"></div>
+                </div>
             </div>
         </div>
     </div>
