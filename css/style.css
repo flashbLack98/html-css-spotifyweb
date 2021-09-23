@@ -61,22 +61,22 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 .main{
     background-color: #141922;
     width: 90%;
     height: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 .action{
     background-color: #282828;
@@ -84,4 +84,117 @@
     width: 100%;
     position: absolute;
     bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ACTION LEFT */
+.action__currently-song-container{
+    padding: 5px;
+    flex-shrink: 0;
+}
+
+.action__currently-song-container::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.action__currently-img{
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+}
+
+.action__currently-img img{
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+}
+
+.action__currently-text{
+   color: white;
+   font-size: 8px;
+   float: left;
+   margin-left: 5px;
+}
+
+.action__title{
+    font-weight: bold;
+}
+
+.action__brano,.action__artist{
+    font-size: 6px;
+}
+
+.action__icon{
+    float: left;
+}
+
+.action__icon i{
+    color: #878787;
+    font-size: 10px;
+    display: block;
+    margin: 3px;
+}
+
+
+/* ACTION CENTRAL */
+.action___control-button-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.control__button{
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.control__button div{
+    margin:0 5px;
+}
+
+.control__button i{
+    font-size: 10px;
+}
+
+
+
+.control__timeline{
+    color: white;
+    display: flex;
+    font-size: 8px;
+    justify-content: space-evenly;
+}
+
+.timeline{
+    height: 5px;
+    width: 80px;
+    background-color: #5A5A5A;
+    border-radius: 5px;
+}
+
+/* ACTION RIGHT */
+.action__setup-button{
+    display: flex; 
+    align-items: center; 
+    flex-shrink: 0;
+}
+
+.action__setup-button i{
+    color: white;
+    font-size: 7px;
+    margin: 0 2px;
+}
+
+.action__volume{
+    height: 3px;
+    width: 40px;
+    background-color: #5A5A5A;
+    border-radius: 5px;
 }

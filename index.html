@@ -3,6 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -32,7 +33,47 @@
         
         </div>
         <div class="main"></div>
-        <div class="action"></div>
+
+
+        <div class="action">
+
+            <div class="action__currently-song-container">
+                <div class="action__currently-img"><img src="img/sinister.jpeg" alt=""></div>
+                <div class="action__currently-text">
+                    <div class="action__title">Sinister</div>
+                    <div class="action__brano">Brano</div>
+                    <div class="action__artist">Nome</div>
+                </div>
+                <div class="action__icon">
+                    <div class="action__heart"><i class="far fa-heart"></i></div>
+                    <div class="action__folder"><i class="far fa-folder"></i></div>
+                </div>
+            </div>
+
+            <div class="action___control-button-container">
+                <div class="control__button">
+                    <div><i class="fas fa-random"></i></div>
+                    <div><i class="fas fa-step-backward"></i></div>
+                    <div><i class="far fa-play-circle"></i></div>
+                    <div><i class="fas fa-step-forward"></i></div>
+                    <div><i class="fas fa-redo-alt"></i></div>
+                </div>
+
+                <div class="control__timeline">
+                    <p>0:25</p>
+                    <div class="timeline"></div>
+                    <p>4:35</p>
+                </div>
+            </div>
+
+
+            <div class="action__setup-button">
+                <div><i class="fas fa-list-ul"></i></div>
+                <div><i class="fas fa-tv"></i></div>
+                <div><i class="fas fa-volume-up"></i></div>
+                <div class="action__volume"></div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
