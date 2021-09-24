@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.display-none{
+    display: none;
+}
+
 body{
     font-family: 'Montserrat', sans-serif;
 }
@@ -59,10 +63,13 @@ body{
 /* ASIDE CENTRAL */
 .aside__central-container{
     flex-grow: 1;
+    overflow: auto; 
 }
 
 .aside__playlist-container{
-    display: none;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
 }
 
 .aside__playlist-container h6{
@@ -74,6 +81,7 @@ body{
     display: flex;
     align-items: center;
     margin:10px 0 0 10px;
+    flex-shrink: 0;
 }
 
 .aside__central-container .aside__playlist-plus{
@@ -91,10 +99,15 @@ body{
 .aside__playlist-name{
     color: #878787;
     font-size: 10px;
-    margin:20px 10px ;
     font-weight: bold;
+    flex-grow: 1;
+    overflow: auto;
 }
 
+.aside__playlist-name li{
+    width: 100%;
+    margin: 15px 0;
+}
 
 
 /* ASIDE BOTTOM */
@@ -110,8 +123,21 @@ body{
 
 .aside__user-icon{
     background-color: #878787;
-    
+    display: inline-block;
+    height: 20px;
+    width: 20px; 
+    border-radius: 50%;
 }
+
+.aside__user-icon img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    padding-left: 5px;
+}
+
+
+
 
 
 
@@ -135,9 +161,9 @@ body{
 
 .main__upgrade-container a{
     font-size: 8px;
-    color: #878787;
+    color: white;
     padding: 5px 20px;
-    border: 1px solid #878787;
+    border: 1px solid white;
     border-radius: 20px;
     text-decoration: none;
     position: absolute;
@@ -148,41 +174,41 @@ body{
 .main__music-type-container{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-top: 20px;
+    justify-content: center;
+    margin-top: 10px;
 }
 
-.main__music-type-container div{
+.main__music-type-container li{
     width: 60px;
-    height: 20px;
     font-size: 6px;
+    padding: 5px;
     color: #878787;
     font-weight: bold;
+    list-style: none;
 }
 
 .main__title h3{
     color: white;
-    padding-left: 10px;
-    padding-bottom: 10px;
+    padding: 10px 15px;
 }
 
 .main__card-container{
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    padding-left: 10px;
+    justify-content: space-evenly;
 }
 
 .main__card{
-    height: 170px;
-    width: calc(100% / 2 - 10px);
+    width: calc(100% / 2 - 20px);
+    margin: 5px 0;
 }
 
-.main__card img{
-    object-fit: contain;
-    height: 100%;
+.main__card-img img{
     width: 100%;
+    height: 100%;
+    
 }
+
 
 .main__card h5{
     text-align: center;
@@ -342,9 +368,9 @@ body{
 /**************************************** 
              MEDIA QUERY 
 ******************************************/
-@media screen and (min-width:600px){
+@media screen and (min-width:576px){
     .aside{
-        width: 150px;
+        width: 200px;
     } 
 
     /* ASIDE TOP */
@@ -372,9 +398,18 @@ body{
     }
 
     /* ASIDE CENTRAL */
-    .aside__playlist-container{
-        display: unset;
+    .aside__central-container{
+        display: flex;
     }
+    
 
+
+    /* MAIN */
+    .main__music-type-container li{
+    width: 140px;
+    font-size: 10px;
+    padding: 10px;
+    text-align: center;
+    }
 
 }
