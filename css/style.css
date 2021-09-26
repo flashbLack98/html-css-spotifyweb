@@ -46,6 +46,7 @@ body{
     width: 15px;
     list-style: none;
     margin-bottom: 5px;
+    position: relative;
 }
 
 .aside li img{
@@ -59,6 +60,19 @@ body{
     font-size: 10px;
     padding-left:5px ;
     font-weight: bold;
+}
+
+.aside span:hover{
+    color: white;
+}
+
+.aside__top-container .aside__top-button:hover a::before{
+    content: "";
+    background-color:#ADFF2F;
+    height: 100%;
+    width: 3px;
+    position: absolute;
+    left: -3px;
 }
 
 /* ASIDE CENTRAL */
@@ -107,6 +121,10 @@ body{
 .aside__playlist-name li{
     width: 100%;
     margin: 15px 0;
+}
+
+.aside__playlist-name li:hover{
+    color: white;
 }
 
 
@@ -180,8 +198,12 @@ body{
     border-radius: 20px;
     text-decoration: none;
     position: absolute;
-    top: 20px;
+    top: 15px;
     right: 10px;
+}
+
+.main__upgrade-container a:hover{
+    font-size: 9px;
 }
 
 .main__music-type-container{
@@ -192,9 +214,9 @@ body{
 }
 
 .main__music-type-container li{
-    width: 60px;
+    min-width: 60px;
     font-size: 6px;
-    padding: 5px;
+    padding: 5px 20px;
     font-weight: bold;
     list-style: none;
 }
@@ -203,6 +225,22 @@ body{
     color: #878787;
     text-decoration: none;
     display: inline-block;
+    position: relative;
+}
+
+.main__music-type-container li a:hover{
+    color: white;
+}
+
+.main__music-type-container li a:hover:after{
+    content: "";
+    background-color: #ADFF2F;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 30px;
+    height: 3px;
+    transform: translateX(-50%);
 }
 
 
@@ -229,11 +267,29 @@ body{
     margin: 5px 0;
 }
 
+.main__card-img{
+    position: relative;
+}
+
 .main__card-img img{
     width: 100%;
     height: 100%;
 }
 
+.main__card:hover .main__card-img img{
+    opacity: 50%;
+}
+
+.main__card:hover .main__card-img::after{
+    content: "\f144";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    font-family: "Font Awesome 5 Free";
+    font-size: 80px;
+    transform: translate(-50%, -50%);
+}
 
 .main__card h5{
     text-align: center;
@@ -257,7 +313,7 @@ body{
 /* ACTION */
 .action{
     background-color: #282828;
-    height:10% ;
+    height:75px ;
     min-width: 100%;
     position: absolute;
     bottom: 0;
@@ -267,20 +323,15 @@ body{
 
 /* ACTION LEFT */
 .action__left{
-    padding: 5px;
+    padding:0 5px;
     flex-shrink: 0;
-}
-
-.action__left::after{
-    content: "";
-    display: table;
-    clear: both;
+    display: flex;
+    align-items: center;
 }
 
 .action__currently-img{
     display: inline-block;
     vertical-align: middle;
-    float: left;
 }
 
 .action__currently-img img{
@@ -292,7 +343,6 @@ body{
 .action__currently-text{
    color: white;
    font-size: 8px;
-   float: left;
    margin-left: 5px;
 }
 
@@ -302,18 +352,25 @@ body{
 
 .action__brano,.action__artist{
     font-size: 6px;
+    color: #878787;
+    font-weight: bold;
 }
 
-.action__icon{
-    float: left;
+.action__brano:hover,.action__artist:hover{
+    color: white;
 }
 
 .action__icon i{
     color: #878787;
     font-size: 10px;
     display: block;
-    margin: 3px;
+    margin:3px;
 }
+
+.action__icon i:hover{
+    color: white;
+}
+
 
 
 /* ACTION CENTRAL */
@@ -339,7 +396,13 @@ body{
 .control__button i{
     font-size: 15px;
     color: white;
-    padding: 0 3px;
+    margin: 0 3px;
+    padding: 1px;
+}
+
+.control__button .play__button:hover{
+    padding: 0;
+    font-size: 17px;
 }
 
 .control__timeline{
@@ -355,6 +418,7 @@ body{
     padding: 0 5px;
 }
 
+
 .timeline{
     height: 5px;
     width: 100px;
@@ -367,6 +431,22 @@ body{
     width: 50%;
     background-color: #C1C1C1;
     border-radius: 5px;
+    position: relative;
+}
+
+.timeline:hover .timeline__progress{
+    background-color: #1DB954;
+}
+
+.timeline:hover .timeline__progress::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    background-color: white;
+    width: 12px;
+    height: 12px;
+    transform: translate(50%,-27%);
+    border-radius: 50%;
 }
 
 /* ACTION RIGHT */
@@ -384,8 +464,6 @@ body{
     vertical-align: middle;
 }
 
-
-
 .action__volume{
     height: 3px;
     width: 40px;
@@ -398,6 +476,22 @@ body{
     width: 40%;
     background-color: #C1C1C1;
     border-radius: 5px;
+    position: relative;
+}
+
+.action__volume:hover .action__volume-progress{
+    background-color: #1DB954;
+}
+
+.action__volume:hover .action__volume-progress::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    transform: translate(50%,-25%);
+    border-radius: 50%;
 }
 
 
@@ -492,7 +586,6 @@ body{
     .action__currently-text {
         font-size: 10px;
         margin-left: 10px;
-        margin-top: 7px;
     }
 
     .action__brano, .action__artist {
@@ -551,9 +644,13 @@ body{
         gap: 10px;
         margin-left: 10px;
     }
-    
+
     .action__icon i{
-        display: inline-block;
+        display: inline;
+    }
+
+    .control__button i {
+        margin: 0px 15px;
     }
 }
 
