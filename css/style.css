@@ -4,13 +4,14 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
 .display-none{
     display: none;
 }
 
-body{
-    font-family: 'Montserrat', sans-serif;
-}
 
 .container{
     display:flex;
@@ -114,10 +115,27 @@ body{
     flex-shrink: 0;
 }
 
-
+.aside__bottom-container li{
+    width: 100%;
+}
 
 .aside__download-icon{
     width: 15px;
+    vertical-align: middle;
+}
+
+.aside__bottom-container span{
+    min-width: 70px ;
+}
+
+.download-line{
+    display: none;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #878787;
+    margin-bottom: 10px;
+
 }
 
 .aside__user-icon{
@@ -131,8 +149,8 @@ body{
 .aside__user-icon img{
     height: 100%;
     width: 100%;
-    object-fit: cover;
-    padding-left: 5px;
+    object-fit: contain;
+    transform: translate(15%);
 }
 
 
@@ -190,7 +208,14 @@ body{
 
 .main__title h3{
     color: white;
-    padding: 10px 15px;
+    padding: 10px 15px 0px;
+}
+
+.main__title p{
+    color: #878787;
+    padding: 5px 15px 10px;
+    font-size: 10px;
+    font-weight: bold
 }
 
 .main__card-container{
@@ -207,7 +232,6 @@ body{
 .main__card-img img{
     width: 100%;
     height: 100%;
-    
 }
 
 
@@ -221,7 +245,7 @@ body{
     text-align: center;
     color: #878787;
     font-size: 10px;
-
+    font-weight: bold;
 }
 
 .main__artisti-popolari img{
@@ -298,14 +322,14 @@ body{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 10px 0;
 }
 
 .control__button{
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .control__button div{
@@ -313,23 +337,27 @@ body{
 }
 
 .control__button i{
-    font-size: 10px;
+    font-size: 15px;
     color: white;
+    padding: 0 3px;
 }
-
-
 
 .control__timeline{
     color: white;
     display: flex;
     font-size: 8px;
-    justify-content: space-evenly;
-    padding-bottom: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.control__timeline p{
+    padding: 0 5px;
 }
 
 .timeline{
     height: 5px;
-    width: 80px;
+    width: 100px;
     background-color: #5A5A5A;
     border-radius: 5px;
 }
@@ -356,6 +384,8 @@ body{
     vertical-align: middle;
 }
 
+
+
 .action__volume{
     height: 3px;
     width: 40px;
@@ -375,13 +405,13 @@ body{
              MEDIA QUERY 
 ******************************************/
 
-/* TAB MINI */
+/* TABLET MINI */
 @media screen and (min-width:600px){
     .aside{
         width: 200px;
     } 
 
-    /* ASIDE TOP */
+    /* ASIDE TOP MEDIA */
     .aside ul {
         padding-left: 10px;
     }
@@ -404,31 +434,52 @@ body{
     .aside span{
         display: unset;
     }
-
-    /* ASIDE CENTRAL */
+    
+    /* ASIDE CENTRAL MEDIA*/
     .aside__central-container{
         display: flex;
     }
-
+    
     .aside__playlist-container{
         display: flex;
     }
 
-    /* MAIN */
+    /* ASIDE BOTTOM MEDIA*/
+    .download-line{
+        display: block;
+    }
+
+    .aside__user-icon{
+        background-color: #878787;
+        display: inline-block;
+        height: 20px;
+        width: 20px; 
+        border-radius: 50%;
+    }
+    
+    .aside__user-icon img{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        transform: translate(15%);
+    }
+
+
+    /* MAIN MEDIA*/
     .main__music-type-container li{
-    width: 140px;
+        width: 140px;
     font-size: 10px;
     padding: 10px;
     text-align: center;
     }
 
-    /* ACTION */
+    /* ACTION MEDIA*/
     .action{
         justify-content: space-between;
     }
 
 
-    /* ACTION LEFT*/
+    /* ACTION LEFT MEDIA*/
     .action__left{
         width: 25%;
     }
@@ -455,17 +506,17 @@ body{
         padding: 0 0 0 15px;
     }
 
-    /* ACTION CENTRAL */
+    /* ACTION CENTRAL MEDIA*/
     .action___central {
         flex-grow: 0;
         width: 50%;
     }
 
     .timeline {
-        width: 240px;
+        width: 200px;
     }
 
-    /* ACTION RIGHT */
+    /* ACTION RIGHT MEDIA*/
     .action__right{
         width: 25%;
     }
@@ -489,18 +540,23 @@ body{
     }
 }
 
-/* TAB */
+/* TABLET */
 @media screen and (min-width:800px){
     .main__card{
         width: calc(100% / 4 - 20px);
     }   
-
+    
     .main__card-container {
         justify-content: flex-start;
         gap: 10px;
         margin-left: 10px;
     }
+    
+    .action__icon i{
+        display: inline-block;
+    }
 }
+
 
 /* DESKTOP */
 @media screen and (min-width:1400px){
@@ -513,6 +569,10 @@ body{
 
     .main__card{
         width: calc(100% / 6 - 20px);
-    }   
+    } 
+    
+    .timeline{
+        width: 580px;
+    }
 
 }
